@@ -1,0 +1,19 @@
+<html lang="en">
+  <head>
+    <%- include('./layouts/head.ejs') %>
+    <title>Dokan | <%= title %></title>
+  </head>
+  <body>
+    <h1>Index</h1>
+    <h2>The Index page</h2>
+    <div><%- include('./layouts/nav.ejs') %></div>
+
+    <div>
+      <% users.forEach(users => { %>
+      <h3><%= users.userName %></h3>
+      <label for="status"> <%= users.status %> </label>
+      <% }); %>
+    </div>
+    <div><%- include('./layouts/footer.ejs') %></div>
+  </body>
+</html>
